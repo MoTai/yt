@@ -17,11 +17,11 @@ describe Yt::Collections::CommentThreads, :server_app do
     end
 
     specify 'with a videoId param, returns comment threads for the video', focus: true do
-      expect(comment_threads.where(videoId: 'MsplPPW7tFo').size).to be > 0
+      expect(comment_threads.where(video_id: 'MsplPPW7tFo').size).to be > 0
     end
 
     specify 'with a channelId param, returns comment threads for the channel' do
-      expect(comment_threads.where(channelId: 'UC-lHJZR3Gqxm24_Vd_AJ5Yw').size).to be > 0
+      expect(comment_threads.where(channel_id: 'UC-lHJZR3Gqxm24_Vd_AJ5Yw').size).to be > 0
     end
   end
 
